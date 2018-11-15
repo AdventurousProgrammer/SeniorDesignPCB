@@ -1,0 +1,534 @@
+EESchema Schematic File Version 4
+LIBS:Nanite-cache
+EELAYER 26 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "Tutorial 1"
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R R1
+U 1 1 5BD4A5F5
+P 2350 4650
+F 0 "R1" H 2420 4696 50  0000 L CNN
+F 1 "1k" H 2420 4605 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 2280 4650 50  0001 C CNN
+F 3 "~" H 2350 4650 50  0001 C CNN
+	1    2350 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5BD4A6DC
+P 8600 1750
+F 0 "R2" V 8393 1750 50  0000 C CNN
+F 1 "4.7k" V 8484 1750 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P2.54mm_Vertical" V 8530 1750 50  0001 C CNN
+F 3 "~" H 8600 1750 50  0001 C CNN
+	1    8600 1750
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4007 D18
+U 1 1 5BD4AC38
+P 3800 2450
+F 0 "D18" H 3800 2666 50  0000 C CNN
+F 1 "1N4007" H 3800 2575 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3800 2275 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 3800 2450 50  0001 C CNN
+	1    3800 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5BD4C0CF
+P 9050 2100
+F 0 "R4" H 8980 2054 50  0000 R CNN
+F 1 "100k" H 8980 2145 50  0000 R CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 8980 2100 50  0001 C CNN
+F 3 "~" H 9050 2100 50  0001 C CNN
+	1    9050 2100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_POT_US R3
+U 1 1 5BD4D09F
+P 9050 2800
+F 0 "R3" H 8982 2846 50  0000 R CNN
+F 1 "1k" H 8982 2755 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 9050 2800 50  0001 C CNN
+F 3 "~" H 9050 2800 50  0001 C CNN
+	1    9050 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 2250 9050 2650
+$Comp
+L Timer:TLC555 U2
+U 1 1 5BD4D485
+P 7650 2150
+F 0 "U2" H 7650 2728 50  0000 C CNN
+F 1 "TLC555" H 7650 2637 50  0000 C CNN
+F 2 "LM555CN_Timer:DIP762W53P254L980H533Q8N" H 7700 1900 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tlc555.pdf" H 8300 1600 50  0001 C CNN
+	1    7650 2150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 2250 8150 3000
+Wire Wire Line
+	8150 3000 9050 3000
+Wire Wire Line
+	9050 3000 9050 2950
+$Comp
+L power:GNDA #PWR0101
+U 1 1 5BD4EB70
+P 7400 4050
+F 0 "#PWR0101" H 7400 3800 50  0001 C CNN
+F 1 "GNDA" H 7405 3877 50  0000 C CNN
+F 2 "" H 7400 4050 50  0001 C CNN
+F 3 "" H 7400 4050 50  0001 C CNN
+	1    7400 4050
+	1    0    0    -1  
+$EndComp
+Connection ~ 7400 4050
+Wire Wire Line
+	7150 1950 7150 1500
+Wire Wire Line
+	7150 1500 7650 1500
+Wire Wire Line
+	7650 1750 7650 1500
+Connection ~ 7650 1500
+Wire Wire Line
+	5650 3800 6400 3800
+Wire Wire Line
+	6450 3800 6450 4050
+Wire Wire Line
+	6150 2500 6400 2500
+Wire Wire Line
+	6400 2500 6400 3800
+Connection ~ 6400 3800
+Wire Wire Line
+	6400 3800 6450 3800
+$Comp
+L Device:LED D12
+U 1 1 5BD55C01
+P 2600 3150
+F 0 "D12" H 2591 3366 50  0000 C CNN
+F 1 "LED" H 2591 3275 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 2600 3150 50  0001 C CNN
+F 3 "~" H 2600 3150 50  0001 C CNN
+	1    2600 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4007 D19
+U 1 1 5BD58475
+P 4600 2950
+F 0 "D19" H 4600 3166 50  0000 C CNN
+F 1 "1N4007" H 4600 3075 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 4600 2775 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 4600 2950 50  0001 C CNN
+	1    4600 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D13
+U 1 1 5BD58E74
+P 3150 1600
+F 0 "D13" H 3141 1816 50  0000 C CNN
+F 1 "LED" H 3141 1725 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 3150 1600 50  0001 C CNN
+F 3 "~" H 3150 1600 50  0001 C CNN
+	1    3150 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4007 D22
+U 1 1 5BD5A4A2
+P 4400 3550
+F 0 "D22" H 4400 3766 50  0000 C CNN
+F 1 "1N4007" H 4400 3675 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 4400 3375 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 4400 3550 50  0001 C CNN
+	1    4400 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D14
+U 1 1 5BD5B1A3
+P 3150 1350
+F 0 "D14" H 3141 1566 50  0000 C CNN
+F 1 "LED" H 3141 1475 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 3150 1350 50  0001 C CNN
+F 3 "~" H 3150 1350 50  0001 C CNN
+	1    3150 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D15
+U 1 1 5BD5CF5E
+P 3150 2000
+F 0 "D15" H 3141 2216 50  0000 C CNN
+F 1 "LED" H 3141 2125 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 3150 2000 50  0001 C CNN
+F 3 "~" H 3150 2000 50  0001 C CNN
+	1    3150 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4007 D20
+U 1 1 5BD5DFF5
+P 3800 3050
+F 0 "D20" H 3800 3266 50  0000 C CNN
+F 1 "1N4007" H 3800 3175 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3800 2875 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 3800 3050 50  0001 C CNN
+	1    3800 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D16
+U 1 1 5BD61A51
+P 3150 3400
+F 0 "D16" H 3141 3616 50  0000 C CNN
+F 1 "LED" H 3141 3525 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 3150 3400 50  0001 C CNN
+F 3 "~" H 3150 3400 50  0001 C CNN
+	1    3150 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D17
+U 1 1 5BD65D8F
+P 3150 2850
+F 0 "D17" H 3141 3066 50  0000 C CNN
+F 1 "LED" H 3141 2975 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 3150 2850 50  0001 C CNN
+F 3 "~" H 3150 2850 50  0001 C CNN
+	1    3150 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 1500 9850 4050
+$Comp
+L Device:C C1
+U 1 1 5BD7ADD2
+P 6750 2650
+F 0 "C1" H 6865 2696 50  0000 L CNN
+F 1 "1 nF" H 6865 2605 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 6788 2500 50  0001 C CNN
+F 3 "~" H 6750 2650 50  0001 C CNN
+	1    6750 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 4050 6750 4050
+Wire Wire Line
+	6750 2250 6750 2500
+Wire Wire Line
+	6750 2250 7150 2250
+Wire Wire Line
+	6750 2800 6750 4050
+Connection ~ 6750 4050
+Wire Wire Line
+	6750 4050 7400 4050
+Wire Wire Line
+	7400 4050 7650 4050
+Connection ~ 7650 4050
+Wire Wire Line
+	7650 2450 7650 4050
+NoConn ~ 5150 3500
+NoConn ~ 4150 5400
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 5BDA8F57
+P 9300 1500
+F 0 "BT1" V 9555 1550 50  0000 C CNN
+F 1 "Battery_Cell" V 9464 1550 50  0000 C CNN
+F 2 "Battery:BatteryHolder_Keystone_2466_1xAAA" V 9300 1560 50  0001 C CNN
+F 3 "~" V 9300 1560 50  0001 C CNN
+	1    9300 1500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9400 1500 9850 1500
+Wire Wire Line
+	9050 3000 9200 3000
+Wire Wire Line
+	9200 3000 9200 2800
+Connection ~ 9050 3000
+$Comp
+L Diode:1N4007 D1
+U 1 1 5BE0BA31
+P 4600 2750
+F 0 "D1" H 4600 2966 50  0000 C CNN
+F 1 "1N4007" H 4600 2875 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 4600 2575 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 4600 2750 50  0001 C CNN
+	1    4600 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4007 D2
+U 1 1 5BE10656
+P 4600 1700
+F 0 "D2" H 4600 1916 50  0000 C CNN
+F 1 "1N4007" H 4600 1825 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 4600 1525 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 4600 1700 50  0001 C CNN
+	1    4600 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4007 D3
+U 1 1 5BE39823
+P 3650 3400
+F 0 "D3" H 3650 3616 50  0000 C CNN
+F 1 "1N4007" H 3650 3525 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 3650 3225 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 3650 3400 50  0001 C CNN
+	1    3650 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4007 D5
+U 1 1 5BE421EB
+P 4600 1350
+F 0 "D5" H 4600 1566 50  0000 C CNN
+F 1 "1N4007" H 4600 1475 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 4600 1175 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 4600 1350 50  0001 C CNN
+	1    4600 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:1N4007 D4
+U 1 1 5BE47361
+P 4500 3200
+F 0 "D4" H 4500 3416 50  0000 C CNN
+F 1 "1N4007" H 4500 3325 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 4500 3025 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 4500 3200 50  0001 C CNN
+	1    4500 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 3200 4950 3200
+$Comp
+L Diode:1N4007 D21
+U 1 1 5BD60525
+P 4000 2000
+F 0 "D21" H 4000 2216 50  0000 C CNN
+F 1 "1N4007" H 4000 2125 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 4000 1825 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 4000 2000 50  0001 C CNN
+	1    4000 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 2700 6150 4450
+Wire Wire Line
+	6150 4450 4950 4450
+Wire Wire Line
+	4950 4450 4950 3200
+Connection ~ 4950 3200
+Wire Wire Line
+	4950 3200 5150 3200
+Wire Wire Line
+	6450 4800 6450 4050
+Connection ~ 6450 4050
+Wire Wire Line
+	8150 1950 8750 1950
+Wire Wire Line
+	7650 1500 8450 1500
+Wire Wire Line
+	8450 1750 8450 1500
+Connection ~ 8450 1500
+Wire Wire Line
+	8450 1500 9100 1500
+Wire Wire Line
+	8750 1750 8750 1950
+Connection ~ 8750 1950
+Wire Wire Line
+	8750 1950 9050 1950
+$Comp
+L 4xxx:4017 U1
+U 1 1 5BD4A8EE
+P 5650 2900
+F 0 "U1" H 5650 3878 50  0000 C CNN
+F 1 "4017" H 5650 3787 50  0000 C CNN
+F 2 "74HC4017D_653:SOIC127P600X175-16N" H 5650 2900 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4017bms-22bms.pdf" H 5650 2900 50  0001 C CNN
+	1    5650 2900
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 2400 6150 2150
+Wire Wire Line
+	6150 2150 7150 2150
+Wire Wire Line
+	7150 1500 5650 1500
+Wire Wire Line
+	5650 1500 5650 2100
+Connection ~ 7150 1500
+Wire Wire Line
+	4750 1350 5150 1950
+Wire Wire Line
+	5150 1950 5150 2400
+Wire Wire Line
+	3300 1350 4450 1350
+Wire Wire Line
+	4750 1700 4750 2500
+Wire Wire Line
+	4750 2500 5150 2500
+Wire Wire Line
+	3300 1600 4250 1600
+Wire Wire Line
+	4450 1600 4450 1700
+Wire Wire Line
+	3300 2000 3500 2000
+Wire Wire Line
+	4150 2000 4150 2600
+Wire Wire Line
+	4150 2600 5150 2600
+Wire Wire Line
+	4350 3200 3500 3200
+Wire Wire Line
+	3500 3200 3500 2000
+Connection ~ 3500 2000
+Wire Wire Line
+	3500 2000 3850 2000
+Wire Wire Line
+	3950 2450 4400 2450
+Wire Wire Line
+	4400 2450 4400 2650
+Wire Wire Line
+	4400 2650 5150 2650
+Wire Wire Line
+	5150 2650 5150 2700
+Wire Wire Line
+	3650 2450 3300 2450
+Wire Wire Line
+	3300 2450 3300 2850
+Wire Wire Line
+	5150 3100 4700 3100
+Wire Wire Line
+	4700 3100 4700 3050
+Wire Wire Line
+	4700 3050 3950 3050
+Wire Wire Line
+	3650 3050 3300 3050
+Wire Wire Line
+	3300 3050 3300 2850
+Connection ~ 3300 2850
+Wire Wire Line
+	5150 3300 4550 3300
+Wire Wire Line
+	4550 3300 4550 3550
+Wire Wire Line
+	4250 3550 4250 1600
+Connection ~ 4250 1600
+Wire Wire Line
+	4250 1600 4450 1600
+Wire Wire Line
+	4750 2750 5150 2750
+Wire Wire Line
+	5150 2750 5150 2800
+Wire Wire Line
+	4450 2750 4150 2750
+Wire Wire Line
+	3600 2750 3600 3150
+Wire Wire Line
+	3600 3150 2750 3150
+Wire Wire Line
+	5150 3000 4750 3000
+Wire Wire Line
+	4750 3000 4750 2950
+Wire Wire Line
+	4450 2950 4150 2950
+Wire Wire Line
+	4150 2950 4150 2750
+Connection ~ 4150 2750
+Wire Wire Line
+	4150 2750 3600 2750
+Wire Wire Line
+	5150 2900 4000 2900
+Wire Wire Line
+	4000 2900 4000 3400
+Wire Wire Line
+	2350 4800 6450 4800
+Wire Wire Line
+	2450 3150 2350 3150
+Wire Wire Line
+	2350 3150 2350 3400
+Wire Wire Line
+	3000 3400 2350 3400
+Connection ~ 2350 3400
+Wire Wire Line
+	2350 3400 2350 4500
+Wire Wire Line
+	3000 2850 2350 2850
+Connection ~ 2350 3150
+Wire Wire Line
+	3000 2000 2350 2000
+Wire Wire Line
+	2350 2000 2350 2850
+Connection ~ 2350 2850
+Wire Wire Line
+	2350 2850 2350 3150
+Wire Wire Line
+	3050 1600 3000 1600
+Wire Wire Line
+	2350 1600 2350 2000
+Connection ~ 3000 1600
+Wire Wire Line
+	3000 1600 2350 1600
+Connection ~ 2350 2000
+Wire Wire Line
+	3000 1350 2350 1350
+Wire Wire Line
+	2350 1350 2350 1600
+Connection ~ 2350 1600
+Wire Wire Line
+	3800 3400 4000 3400
+Wire Wire Line
+	3500 3400 3300 3400
+Wire Wire Line
+	7650 4050 9050 4050
+Wire Wire Line
+	8150 2150 8600 2150
+Wire Wire Line
+	8600 2150 8600 3250
+Wire Wire Line
+	8600 3250 9050 3250
+$Comp
+L Device:C C2
+U 1 1 5BF96586
+P 9050 3650
+F 0 "C2" H 9165 3696 50  0000 L CNN
+F 1 "4.7 uF" H 9165 3605 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 9088 3500 50  0001 C CNN
+F 3 "~" H 9050 3650 50  0001 C CNN
+	1    9050 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 3000 9050 3250
+Connection ~ 9050 3250
+Wire Wire Line
+	9050 3250 9050 3500
+Wire Wire Line
+	9050 3800 9050 4050
+Connection ~ 9050 4050
+Wire Wire Line
+	9050 4050 9850 4050
+$EndSCHEMATC
